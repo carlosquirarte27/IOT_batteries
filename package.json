@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "\"This is an app to manage kart races. Is a school project for ITESO\"",
   "main": "app.js",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "start": "node .",
     "dev": "nodemon .",
