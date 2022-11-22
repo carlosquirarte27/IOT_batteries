@@ -65,7 +65,7 @@ const batteryController = {
                 res.send({status: "Not updated"})
             }
         });
-        res.send({message:"se ha actualizado a : "+req.params.id})
+        res.send({message:"se ha actualizado a : "+ req.params.id})
     }
 }
 
