@@ -4,7 +4,8 @@
   "description": "\"This is an app to manage kart races. Is a school project for ITESO\"",
   "main": "app.js",
   "engines": {
-    "node": "16.x"
+    "node": "16.13.2",
+    "npm":"8.1.2"
   },
   "scripts": {
     "start": "node .",
