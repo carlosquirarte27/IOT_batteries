@@ -59,7 +59,7 @@ app.get('/plants',async (req,res) => {
     });
 
     //const measureRef = fdb.collection("measure");
-    res.send("test");
+    res.send("Updated");
     }
     catch{
         res.send(404);
