@@ -4,9 +4,6 @@ const Battery = require("./battery.model");
 
 const batteryController = {
     getAll: (req, res) => {
-        if(req.query){
-
-        }
         console.log(req.query);
         const battery = new Battery();
         console.log("Bataconas");
@@ -54,18 +51,19 @@ const batteryController = {
         const updated_battery = {
             _id: req.params.id,
             Percentage: req.query["Percentage"],
-            Temperature: req.query["Temperature"]
+            Temperature: req.query["Temperature"],
+            Voltage: req.query["Voltage"]
         };
         Database.collection("Batteries").updateOne(
         {_id: ObjectId(req.params.id)},
-        { $set: {"Temperature" : updated_battery.Temperature,"Percentage": updated_battery.Percentage}},
+        { $set: {"Temperature" : updated_battery.Temperature,"Percentage": updated_battery.Percentage,"Voltage": updated_battery.Voltage}},
         function(err, res) {
             if (err){
                 console.log(err)
                 res.send({status: "Not updated"})
             }
         });
-        res.send({message:"se ha actualizado a : "+ req.params.id})
+        res.send({message:"se ha actualizado a : "+req.body.Name})
     }
 }
 
