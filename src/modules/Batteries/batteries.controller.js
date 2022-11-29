@@ -52,7 +52,8 @@ const batteryController = {
             _id: req.params.id,
             Percentage: req.query["Percentage"],
             Temperature: req.query["Temperature"],
-            Voltage: req.query["Voltage"]
+            Voltage: req.query["Voltage"],
+            Current: req.query["Current"],
         };
 
         Database.collection("Batteries").updateOne(
