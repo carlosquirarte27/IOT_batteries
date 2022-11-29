@@ -54,9 +54,10 @@ const batteryController = {
             Temperature: req.query["Temperature"],
             Voltage: req.query["Voltage"]
         };
+
         Database.collection("Batteries").updateOne(
         {_id: ObjectId(req.params.id)},
-        { $set: {"Temperature" : updated_battery.Temperature,"Percentage": updated_battery.Percentage,"Voltage": updated_battery.Voltage}},
+        { $set: {"Temperature" : updated_battery.Temperature,"Percentage": updated_battery.Percentage,"Voltage": updated_battery.Voltage,"Current": updated_battery.Current}},
         function(err, res) {
             if (err){
                 console.log(err)
