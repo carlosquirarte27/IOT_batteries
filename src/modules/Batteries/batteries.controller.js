@@ -47,7 +47,7 @@ const batteryController = {
     res.send({status: "Ok, hemos borrado a: "+req.params.id})
     },
     update: (req,res) => {
-        console.log("Vamos a actualizar: " + req.query["Name"] + '   '+  req.params.id);
+        console.log("Vamos a actualizar: " + req.params.id);
         const updated_battery = {
             _id: req.params.id,
             Percentage: req.query["Percentage"],
